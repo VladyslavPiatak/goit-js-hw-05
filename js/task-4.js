@@ -1,4 +1,4 @@
-const getTotalBalanceByGender = (users, gender) => users.filter(user => user.gender === gender).forEach(client => client);
+const getTotalBalanceByGender = (users, gender) => users.filter(user => user.gender === gender).reduce((start, client) => start += client.balance, 0);
 
 const clients = [
 	{
